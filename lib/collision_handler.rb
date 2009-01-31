@@ -5,7 +5,6 @@ require 'snake'
 
 module JakeTheSnake
   class CollisionHandler
-    
     def is_wall_collision(snake_head, wall)
       if (snake_head.x < wall.x or snake_head.y < wall.y or
           snake_head.x + 16 > wall.x + wall.w 
@@ -20,12 +19,13 @@ module JakeTheSnake
       jake_body.each do |body_part|
         if body_part.x == obstacles.x and body_part.y == obstacles.y
           return true
+        else
+          return false
         end
-        false
       end
     end
 
-    def is_self_snake_collision(
-
-    
+    def is_self_snake_collision()
+    end
   end
+end
