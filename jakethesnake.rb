@@ -21,8 +21,8 @@ module JakeTheSnake
     end
 
     def run
-      engine = Snake_Engine.new(640, 480, false)
-      state = Menu_State.new
+      engine = SnakeEngine.new(640, 480, false)
+      state = MenuState.new
       engine.set_state(state)
       engine.set_tick_interval(100)
       engine.loop
@@ -32,9 +32,9 @@ module JakeTheSnake
     begin
       run
     rescue StandardError => err
-      $stderr.puts "\033[0;31mStandardError!: \n\n>\033[0m#{err.message}"
+      $stderr.puts "\033[0;31mStandardError! \n\n\033[0m"+err.message.each do { |lines| puts "> "+lines }
     rescue Exception => exp
-      $stderr.puts "\033[0;31mException!: \n\n>\033[0m#{exp.message}"
+      $stderr.puts "\033[0;31mException! \n\n\033[0m"+exp.message.each do { |lines| puts "> "+lines }
     end
   end
 end
