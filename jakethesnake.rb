@@ -32,9 +32,9 @@ module JakeTheSnake
     begin
       run
     rescue StandardError => err
-      $stderr.puts "\033[0;31mStandardError! \n\n\033[0m"+err.message.each do { |lines| puts "> "+lines }
+      $stderr.puts "\033[0;31mStandardError! \n\n\033[0m"+err.message.each_line do { |lines| puts "> "+lines } end
     rescue Exception => exp
-      $stderr.puts "\033[0;31mException! \n\n\033[0m"+exp.message.each do { |lines| puts "> "+lines }
+      $stderr.puts "\033[0;31mException! \n\n\033[0m"+exp.message.each_line do { |lines| puts "> "+lines } end
     end
   end
 end
