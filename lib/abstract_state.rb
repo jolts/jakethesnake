@@ -6,7 +6,7 @@ module JakeTheSnake
   class AbstractState
     attr_accessor :engine
     def initalize
-      engine = Snake_Engine.new
+      engine = SnakeEngine.new
       self.engine = 0
     end
 
@@ -20,8 +20,3 @@ module JakeTheSnake
     end
   end
 end
-
-
-
-
-
