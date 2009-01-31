@@ -4,7 +4,7 @@ require 'snake_engine'
 require 'single_state'
 
 module JakeTheSnake
-  class Highscore_State < Abstract_State
+  class HighscoreState < Abstract_State
     attr_accessor :high_score_list
 
     def initialize
@@ -121,3 +121,5 @@ module JakeTheSnake
         end
       end
     end
+  end
+end
