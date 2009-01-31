@@ -20,7 +20,7 @@ module JakeTheSnake
     end
 
     def run
-      engine = SnakeEngine.new(640, 480, false)
+      engine = Snake_Engine.new(640, 480, false)
       state = MenuState.new
       engine.set_state(state)
       engine.set_tick_interval(100)
