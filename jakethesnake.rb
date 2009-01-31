@@ -1,4 +1,5 @@
-#!/usr/bin/ruby -w
+#!/usr/bin/env ruby
+
 require 'lib/abstract_state'
 require 'lib/collision_handler'
 require 'lib/gameover_state'
@@ -11,6 +12,7 @@ require 'lib/single_state'
 require 'lib/snake_engine'
 require 'lib/snake'
 require 'lib/sprite'
+
 require 'sdl'
 
 module JakeTheSnake

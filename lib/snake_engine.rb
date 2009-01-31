@@ -1,4 +1,4 @@
-#!/usr/bin/ruby -w
+#!/usr/bin/env ruby
 
 require 'sdl'
 
@@ -26,7 +26,7 @@ class Snake_Engine
       state = nil
       tick_interval = 50
     end
-    
+
     def set_state(state)
       self.state = nil
       self.state = state
@@ -35,5 +35,3 @@ class Snake_Engine
 
   end
 end
-
-
