@@ -15,7 +15,7 @@ module JakeTheSnake
       $image_buffer = Hash.new
       state = Abstract_State.new
       if(SDL::Init(SDL::INIT_VIDEO) == -1)
-        print ("Can't init SDL: #{SDL::SDL_GetError}")
+        puts "Can't init SDL: #{SDL::SDL_GetError}"
         exit 1
       end
 
@@ -26,7 +26,7 @@ module JakeTheSnake
       end
 
       if screen == nil
-        print ("Can't set video mode: #{SDL::SDL_GetError}")
+        puts "Can't set video mode: #{SDL::SDL_GetError}"
         SDL::SDL_Quit
         exit 1
         state = nil
@@ -41,14 +41,14 @@ module JakeTheSnake
 
       def loop
         event = SDL::SDL_event
-        
+
         if state == nil
           return
         end
-        
+
         while not done
           next_tick = SDL::SDL_GetTicks.to_i + tick_interval
-          
+
           while SDL::SDL_PollEvent(event)
             case event.type
             when SDL::SDL_Quit
@@ -68,18 +68,18 @@ module JakeTheSnake
             SDL::SDL_Delay(next_tick - SDL_GetTicks)
           end
           SDL::SDL_Quit
-    end
-        
+        end
+
         def quit
           done = true
         end
-        
+
         def load_image(filename)
           if image_buffer.find(filename) != image_buffer.end
             # If the image already has been loaded, just return.
             exit 1
           end
-          
+
           loaded_image = SDL::Surface = 0
           optimized_image = SDL::Surface = 0
           loaded_image = SDL::SDL_LoadBMP(filename)
@@ -92,3 +92,5 @@ module JakeTheSnake
         end
       end
     end
+  end
+end
