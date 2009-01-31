@@ -1,0 +1,2 @@
+module JakeTheSnake
+  class Sprite

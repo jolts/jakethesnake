@@ -2,5 +2,6 @@
 
 require 'sdl'
 
-class Game
-  def initalize
+module JakeTheSnake
+  class Game
+    def initalize
