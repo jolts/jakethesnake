@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'sdl'
 
 module JakeTheSnake
@@ -23,9 +25,9 @@ module JakeTheSnake
         state = nil
         tick_interval = 50
       end
-    
+
       def set_state(state)
-      
+
     end
   end
 end
