@@ -50,14 +50,14 @@ module JakeTheSnake
         if player1.x == player2[0].x and player1.y == player2[0].y
           2 # Player 2 looose
         end
-
-        player2.each do |player2|
-          if player2.x == player1[0].x and player2.y == player1[0].y
-            1 # Player 1 loose
-          end
-        end
-        0 # No collision
       end
+
+      player2.each do |player2|
+        if player2.x == player1[0].x and player2.y == player1[0].y
+          1 # Player 1 loose
+        end
+      end
+        0 # No collision
     end
   end
 end
