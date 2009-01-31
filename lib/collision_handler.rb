@@ -10,8 +10,9 @@ module JakeTheSnake
           snake_head.x + 16 > wall.x + wall.w 
           or snake_head.y + 16 > wall.y + wall.h)
         return true
+      else 
+        return false
       end
-      return false
     end
 
     def is_obstacles_collision(jake_body, obstacles)
@@ -32,9 +33,9 @@ module JakeTheSnake
         snake.each do |second_part+1|
           if first_part.x == second_part.x or 
               first_part.y == second_part.y
-            true
+            return true
           else
-            false
+            return false
           end
         end
       end
