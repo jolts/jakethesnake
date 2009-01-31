@@ -110,7 +110,7 @@ module JakeTheSnake
             SDL::SDL_BlitSurface(number, nil, highscore_screen, rect)
           when char == '9'
             number = engine.load_image("./img/high_9.bmp")
-            SDL::SDL_BlitSurface(number, nil, highscore_screen, rect)p
+            SDL::SDL_BlitSurface(number, nil, highscore_screen, rect)
           when char == '0'
             number = engine.load_image("./img/high_0.bmp")
             SDL::SDL_BlitSurface(number, nil, highscore_screen, rect)
