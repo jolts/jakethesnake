@@ -27,5 +27,14 @@ module JakeTheSnake
       engine.set_tick_interval(100)
       engine.loop
     end
+
+    # Run the game!
+    begin
+      run
+    rescue StandardError => err
+      $stderr.puts "\033[0;31mStandardError!: \n\n>\033[0m#{err.message}"
+    rescue Exception => exp
+      $stderr.puts "\033[0;31mException!: \n\n>\033[0m#{exp.message}"
+    end
   end
 end
