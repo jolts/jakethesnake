@@ -16,12 +16,14 @@ require 'sdl'
 module JakeTheSnake
   class Game
     def initalize
-      end
-    
+    end
+
     def run
       engine = Snake_Engine.new(640, 480, false)
       state = Menu_State.new
       engine.set_state(state)
       engine.set_tick_interval(100)
       engine.loop
+    end
+  end
 end
