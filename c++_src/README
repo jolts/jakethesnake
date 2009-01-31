@@ -1,0 +1,57 @@
+
+Jake The Snake For Linux
+---------------------
+
+Requirements
+------------
+
+Jake The Snake for Linux supports the following video subsystems:
+
+- SDL, A API for creating ghrapic applications.
+
+Installation
+------------
+
+Just type:
+make, to compile.
+make run; to run.
+make instal, to install (requares root).
+
+How To Play
+-----------
+
+MENU
+When you start game you will see the Menu screen, here you can select whether
+you would like to play alone or with a friend.
+You can also select to view a Highscore table or to exit the game.
+In the Menu you use the arrowkeys to navigate and your ENTER button to select.
+
+SINGLEPLAYER
+In this mode you play by your selfe against a ghost who tryes to eat you up.
+You get points by eating appels you find on the screen, for each apple you eat
+you will get longer and longer. There is also carrots witch makes you shoter
+when eating them. When colliding to a wall you will loose the game
+and the highscore will be shown, now you press ENTER to proceed.
+If you are succesful with eating pacman you will gain extrapower until you eat
+a carrot or get eaten by the ghost or collids with a wall.
+Here you use the arrowkeys to navigate your snake.
+
+MULTIPLAYER
+In this mode you will play against a friend. You will both try to eat the same
+apple and the player who can avoid walls or colliding with the other player
+will win the round.
+Here you use the arrowkeys to navigate snake number one and
+A, S, D, W to navigate snake number two.
+
+HIGHSCORE
+Her you can see the best points any one got.
+Press ENTER to prceed.
+
+EXIT
+Will end the game.
+
+Notes
+-----
+
+Jake The Snake is an unsupported product.
+
