@@ -3,8 +3,8 @@ require 'snake_engine'
 require 'sdl'
 
 module JakeTheSnake
-  class AbstractState
-    attr_accessor :engine
+  class Abstract_State
+    attr_accessor :engine, :screen
     def initalize
       engine = SnakeEngine.new
       self.engine = 0
