@@ -16,6 +16,7 @@ require 'sdl'
 module JakeTheSnake
   class Game
     def initalize
+      # FIXME?
     end
 
     def run
@@ -29,10 +30,12 @@ module JakeTheSnake
     # Run the game!
     begin
       run
-    rescue StandardError => err
-      $stderr.puts "\033[0;31mStandardError! \n\n\033[0m"+err.message.each_line { |lines| puts "> "+lines }
-    rescue Exception => exp
-      $stderr.puts "\033[0;31mException! \n\n\033[0m"+exp.message.each_line { |lines| puts "> "+lines }
+    rescue StandardError => stderr
+      $stderr.puts "\033[0;31mStandardError! \n\n\033[0m"+stderr.message.each_line { |lines| puts "> "+lines }
+    rescue Exception => except
+      $stderr.puts "\033[0;31mException! \n\n\033[0m"+except.message.each_line { |lines| puts "> "+lines }
+    rescue TypeError => typerr
+      $stderr.puts "\003[0;31mTypeError! \n\n\033[0m"+typerr.message.each_line { |lines| puts "> "+lines }
     end
   end
 end
