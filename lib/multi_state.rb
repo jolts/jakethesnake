@@ -31,7 +31,7 @@ module JakeTheSnake
         @@carrot.y = sprite_y
         @@rotten_carrot << carrot
       }
-      apple_tick = 0
+      carrot_tick = 0
 
       # FIXME
       #
