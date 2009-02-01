@@ -31,9 +31,13 @@ module JakeTheSnake
     begin
       run or raise LolError # Just trying :D
     rescue LolError
-      $stderr.puts "\033[0;31mError! \n\n\033[0m"+lolerr.message.each_line { |lines| puts "> "+lines }
+      $stderr.puts "\033[0;31mError! \n\n\033[0m"+lolerr.message.each_line { |lines| 
+        puts "> "+lines 
+      }
     rescue Exception => except
-      $stderr.puts "\033[0;31mException! \n\n\033[0m"+except.message.each_line { |lines| puts "> "+lines }
+      $stderr.puts "\033[0;31mException! \n\n\033[0m"+except.message.each_line { |lines| 
+        puts "> "+lines 
+      }
     end
   end
 end
