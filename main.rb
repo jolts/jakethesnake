@@ -3,7 +3,6 @@
 require 'lib/abstract_state'
 require 'lib/collision_handler'
 require 'lib/gameover_state'
-require 'lib/game'
 require 'lib/highscore_state'
 require 'lib/menu_state'
 require 'lib/multi_state'
