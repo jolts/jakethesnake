@@ -4,9 +4,9 @@ require 'sdl'
 
 module JakeTheSnake
   class Abstract_State
-    attr_accessor :engine, :screen
+    attr_accessor :engine 
     def initalize
-      engine = SnakeEngine.new
+      engine = Snake_Engine.new
       self.engine = 0
     end
 
