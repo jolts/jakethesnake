@@ -29,13 +29,11 @@ module JakeTheSnake
 
     # Run the game!
     begin
-      run
-    rescue StandardError => stderr
-      $stderr.puts "\033[0;31mStandardError! \n\n\033[0m"+stderr.message.each_line { |lines| puts "> "+lines }
+      run or raise LolError # Just trying :D
+    rescue LolError
+      $stderr.puts "\033[0;31mError! \n\n\033[0m"+lolerr.message.each_line { |lines| puts "> "+lines }
     rescue Exception => except
       $stderr.puts "\033[0;31mException! \n\n\033[0m"+except.message.each_line { |lines| puts "> "+lines }
-    rescue TypeError => typerr
-      $stderr.puts "\003[0;31mTypeError! \n\n\033[0m"+typerr.message.each_line { |lines| puts "> "+lines }
     end
   end
 end
