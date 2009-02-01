@@ -6,9 +6,9 @@ require 'snake'
 module JakeTheSnake
   class CollisionHandler
     def is_wall_collision(snake_head, wall)
-      if (snake_head.x < wall.x) || (snake_head.y < wall.y) 
+      if ((snake_head.x < wall.x) || (snake_head.y < wall.y) 
         || (snake_head.x + 16 > wall.x + wall.w) 
-        || (snake_head.y + 16 > wall.y + wall.h)
+        || (snake_head.y + 16 > wall.y + wall.h))
         true
       else 
         false
