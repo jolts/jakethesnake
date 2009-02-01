@@ -30,7 +30,7 @@ module JakeTheSnake
     # Run the game!
     begin
       run or raise LolError # Just trying :D
-    rescue LolError
+    rescue LolError => lolerr
       $stderr.puts "\033[0;31mError! \n\n\033[0m"+lolerr.message.each_line { |lines| 
         puts "> "+lines 
       }
