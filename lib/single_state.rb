@@ -6,7 +6,7 @@ require 'snake'
 require 'snake_engine'
 
 module JakeTheSnake
-  class SingleState < Abstract_State
+  class SingleState < AbstractState
     attr_accessor :apple, :carrot, :pacman, :ghost
     def initalize
       @@high_score_list = Array.new
@@ -21,12 +21,12 @@ module JakeTheSnake
       green_background = SDL::SDL_Rect
       @@pacman_is_alive = true
       @@player1.init(1)
-      
+
       @@apple = Obstacles(Snake_Engine.new.load_image("./img/apple.bmp"))
       @@carrot = Obstacles(Snake_Engine.new.load_image("./img/carrot.bmp"))
       @@pacman = Obstacles(Snake_Engine.new.load_image("./img/pacman.bmp"))
       @@ghost = Obstacles(Snake_Engine.new.load_image("./img/ghost.bmp"))
-      
+
       # Spawns 10 apples.
       # Get a random position until we find a free one
       10.times {
@@ -73,7 +73,7 @@ module JakeTheSnake
         green_background.y = 16
         green_background.w = 608
         green_background.h = 448
-        
+
         finished = false
 
         # Sets the initial direction to the right
@@ -84,14 +84,14 @@ module JakeTheSnake
         # Everything a event happens that increases size, 3 parts are added
         @@p1_parts_to_add = 3
       end
-      
+
       def is_free(x, y) 
         @@apples.each do |apple|
           if apple.x == x and apple.y == y
             false
           end
         end
-        
+
         rotten_carrots.each do |rotten_carrot|
           if rotten_carrot.x = x and rotten_carrot.y == y
             false
@@ -103,7 +103,7 @@ module JakeTheSnake
             false
           end
         end
-        
+
         if ghost.x == x and ghost.y == y
           false
         end
@@ -137,7 +137,7 @@ module JakeTheSnake
         break
       end
     end
-    
+
     def clock_tick
       player1.move(@@p1dir)
       check_collisions
@@ -147,7 +147,7 @@ module JakeTheSnake
         player1.add_parts(1)
         p1_parts_to_add -= 1
       end
-      
+
       move_carrot
       move_apple
       move_ghost
@@ -283,7 +283,7 @@ module JakeTheSnake
       in_score = 0.1 + score
       filename = "high_score.txt"
       input = File.open(filename, 'a+')
-      
+
       input.each_line do |line|
         high_score_list << line
       end
@@ -304,7 +304,7 @@ module JakeTheSnake
       end
       output.close
     end
-    
+
     def is_free_ghost(x, y)
       @@apples.each do |apple|
         if apple.x == x and apple.y == y
@@ -317,7 +317,7 @@ module JakeTheSnake
           false
         end
       end
-      
+
       player1.snake_body.each do |body_part|
         if body_part.x == x and body_part.y == y
           false
@@ -354,7 +354,7 @@ module JakeTheSnake
         end while (is_free(sprite_x, sprite_y) == false)
         @@apple.x = sprite_x
         @@apple.y = sprite_y
-        
+
         apples[0] = apple
         apple_tick = 0
       end
@@ -368,7 +368,7 @@ module JakeTheSnake
         elsif player1.snake_body[0].x > @@ghost.x
           @@ghost.x += 16
         end
-        
+
         if player1.snake_body[0].y < @@ghost.y
           @@ghost.y -= 16
         elsif player1.snake_body[0].y > @@ghost.y
