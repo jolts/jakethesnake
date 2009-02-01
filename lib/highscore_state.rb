@@ -49,7 +49,7 @@ module JakeTheSnake
       filename = "high_score.txt"
       high_score_list = Array.new
       input = File.open(filename, "a+")
-      
+
       input.each_line do |line|
         high_score_list << line
       end

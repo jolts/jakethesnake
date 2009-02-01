@@ -61,7 +61,7 @@ module JakeTheSnake
           end
           state.clock_tick
           state.draw(screen)
-          
+
           SDL::SDL_Flip(screen)
 
           if SDL::SDL_GetTicks < next_tick

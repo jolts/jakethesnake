@@ -21,7 +21,7 @@ module JakeTheSnake
       y = 0 + 160 * m_player # Gives us coordinates for our players
       instance = m_player
       head = true
-      
+
       0.upto(length) do |part|
         snake_part.is_head = head
         snake_part.x = x
@@ -31,7 +31,7 @@ module JakeTheSnake
         head = false
       end
     end
-    
+
     def draw(screen)
       snake_body.each do |body_part|
         if body_part.is_head
@@ -42,7 +42,7 @@ module JakeTheSnake
           else
             snake_surface = load_image("./img/player_2_head.bmp")
           end
-          
+
         else
           if !rainbow
             snake_surface = load_image("./img/player_body.bmp")
@@ -87,7 +87,7 @@ module JakeTheSnake
         break
       end
     end
-    
+
     def add_part(n)
       0.upto(n) do |part|
         snake_part.is_head = false

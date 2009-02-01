@@ -62,5 +62,3 @@ module JakeTheSnake
       0 # No collision
     end
   end
-
-

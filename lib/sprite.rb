@@ -4,7 +4,7 @@ require 'sdl'
 module JakeTheSnake
   class Sprite
     attr_accessor :direction
-    
+
     def initalize
       @@direction = 0
       @@snake_part = Struct.new
@@ -15,7 +15,7 @@ module JakeTheSnake
       @@y = 0
       image_buffer = Hash.new
     end
-    
+
     def apply_surface(x, y, image, screen)
       offset = SDL::SDL_Rect
       offset.x = x
@@ -31,7 +31,7 @@ module JakeTheSnake
       loaded_image = SDL::Surface = nil
       optimized_imae = SDL::Surface = nil
       loaded_image = SDL::LoadBMP(filename)
-      
+
       if loaded_image != 0
         optimized_image = SDL::DisplayFormat(loaded_image)
         SDL::SDL_FreeSurface(loaded_image)

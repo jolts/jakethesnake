@@ -2,3 +2,5 @@
 
 module JakeTheSnake
   class MenuState
+  end
+end
